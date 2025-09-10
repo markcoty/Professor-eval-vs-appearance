@@ -35,7 +35,7 @@
    - Upper-level male 1: 4.15
    - Upper-level male 2: 4.75
  - Overall average beauty rating: 4.42
- - 
+
 - **Modeling:** 
  - All models are in the 0.65–0.68 accuracy range (except Logistic Regression at ~0.59–0.61).
  - This suggests the problem is not trivial, but also not highly separable by these models with the current features.
@@ -47,18 +47,21 @@
  - For a middle ground, Random Forest / XGBoost would be best.
 
 - **Linear Regression Highlights**
+
  - Slope:
-  - Female: 0.03 → For each 1-unit increase in beauty rating, average evaluation increases by only 0.03 points (very small effect).
-  - Male: 0.11 → For each 1-unit increase in beauty rating, evaluations increase by 0.11 points (larger effect).
-  - Interpretation: Beauty has a stronger positive relationship with evaluation scores for male professors.
+   - Female: 0.03 → For each 1-unit increase in beauty rating, average evaluation increases by only 0.03 points (very small effect).
+   - Male: 0.11 → For each 1-unit increase in beauty rating, evaluations increase by 0.11 points (larger effect).
+   - Interpretation: Beauty has a stronger positive relationship with evaluation scores for male professors.
+
  - Correlation:
-  - Female: 0.09 → very weak correlation (close to zero).
-  - Male: 0.31 → moderate positive correlation.
-  - Interpretation: Male professors’ scores show a more noticeable upward trend with beauty ratings, whereas female professors’ scores barely change with beauty.
+   - Female: 0.09 → very weak correlation (close to zero).
+   - Male: 0.31 → moderate positive correlation.
+   - Interpretation: Male professors’ scores show a more noticeable upward trend with beauty ratings, whereas female professors’ scores barely change with beauty.
+
  - p-value:
-  - Female: 0.2348 → not statistically significant (greater than 0.05). The slope could easily be due to chance.
-  - Male: 2.0e-07 → highly statistically significant. The relationship is very unlikely due to chance.
-  - Interpretation: Beauty significantly predicts evaluations for male professors, but not for female professors.
+   - Female: 0.2348 → not statistically significant (greater than 0.05). The slope could easily be due to chance.
+   - Male: 2.0e-07 → highly statistically significant. The relationship is very unlikely due to chance.
+   - Interpretation: Beauty significantly predicts evaluations for male professors, but not for female professors.
 
 - **Statistical tests:** Two-sample t-tests show that males have higher scores, and our confidence in this concluion is 99.7%.
 
